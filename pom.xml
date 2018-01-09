@@ -155,29 +155,7 @@
           </execution>
         </executions>
       </plugin>
-        
-        <plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>cobertura-maven-plugin</artifactId>
-    <version>2.6</version>
-    <configuration>
-        <quiet>true</quiet>
-        <formats>
-            <format>xml</format>
-        </formats>
-        <instrumentation>
-            <ignoreTrivial>true</ignoreTrivial>
-        </instrumentation>
-    </configuration>
-    <executions>
-        <execution>
-            <phase>package</phase>
-                <goals>
-                    <goal>cobertura</goal>
-                </goals>
-        </execution>
-    </executions>
-</plugin>
+
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -192,29 +170,7 @@
   </build>
   <reporting>
     <plugins>
-      <!-- integrate maven-cobertura-plugin to project site -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>${cobertura.version}</version>
-        <configuration>
-           <check>
-               <haltOnFailure>false</haltOnFailure>
-            </check>
-          <formats>
-           <format>html</format>
-           <format>xml</format>
-       </formats>
-       <reportSets>
-           <reportSet>
-               <reports>
-                   <report>cobertura</report>
-               </reports>
-           </reportSet>
-       </reportSets>
-          <check />
-        </configuration>
-      </plugin>
+
         
         <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
